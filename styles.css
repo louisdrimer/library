@@ -1,0 +1,10 @@
+:root * {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+th,
+td {
+    outline: solid black 1px;
+    width: 200px;
+    height: 2rem;
+}
