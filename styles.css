@@ -7,4 +7,9 @@ td {
     outline: solid black 1px;
     width: 200px;
     height: 2rem;
+    text-align: center;
+}
+
+th#identification {
+    width: 500px;
 }
