@@ -1,5 +1,6 @@
 const myLibrary = [];
 
+// Book constructor
 function Book(title, author, length) {
     this.title = title;
     this.author = author;
@@ -8,6 +9,8 @@ function Book(title, author, length) {
 }
 
 function addBookToLibrary(title, author, length) {
+
+    // Library array of book objects
     const book = new Book(title, author, length);
     myLibrary.push(book);
 
@@ -20,6 +23,23 @@ function addBookToLibrary(title, author, length) {
         cell.innerText = value;
         newRow.appendChild(cell);
     }
+
+    // Create remove button
+    removeButton = document.createElement("button");
+    removeButton.innerText = "Remove"
+
+    const bookID = book.id;
+    removeButton.addEventListener("click", function() {
+        newRow.remove()
+
+        // Remove from library array
+        myLibrary.splice(myLibrary.find((book) => book.id === bookID), 1)
+    })
+
+    // Append all to table
+    const removeCell = document.createElement("td");
+    removeCell.appendChild(removeButton);
+    newRow.appendChild(removeCell);
 
     libraryTable.appendChild(newRow);
 }
