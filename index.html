@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="scripts.js" defer></script>
 </head>
 <body>
-    <table id="libraryTable">
+    <table id="library-table">
         <tr>
             <th>Author</th>
             <th>Title</th>
@@ -20,15 +20,15 @@
     <button class="new-book-button" command="show-modal" commandfor="my-dialog">Add new book</button>
     <dialog id="my-dialog">
         <p>Add new book:</p>
-        <label for="author">Author</label>
-        <input id="author" type="text">
+        <label for="author-input">Author</label>
+        <input id="author-input" type="text">
 
-        <label for="title">Title</label>
-        <input id="title" type="text">
+        <label for="title-input">Title</label>
+        <input id="title-input" type="text">
 
-        <label for="length">Length</label>
-        <input id="length"type="number">
-        <button type="submit" commandfor="my-dialog" command="close">Submit</button>
+        <label for="length-input">Length</label>
+        <input id="length-input"type="number">
+        <button id="new-book-submit-button" type="submit" commandfor="my-dialog" command="close">Submit</button>
         <button commandfor="my-dialog" command="close">Close</button>
     </dialog>
 </body>
