@@ -24,7 +24,15 @@ function addBookToLibrary(title, author, length) {
         newRow.appendChild(cell);
     }
 
-    // Create remove button
+    // Create read cell with checkbox
+    const readCell = document.createElement("td");
+    const checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    
+    readCell.appendChild(checkbox);
+    newRow.append(readCell);
+
+    // Create remove row button
     removeButton = document.createElement("button");
     removeButton.innerText = "Remove"
 
@@ -35,12 +43,12 @@ function addBookToLibrary(title, author, length) {
         // Remove from library array
         myLibrary.splice(myLibrary.find((book) => book.id === bookID), 1)
     })
-
-    // Append all to table
+    
     const removeCell = document.createElement("td");
     removeCell.appendChild(removeButton);
     newRow.appendChild(removeCell);
 
+    // Append new row to table
     libraryTable.appendChild(newRow);
 }
 
