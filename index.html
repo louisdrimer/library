@@ -16,5 +16,20 @@
             <th id="identification">ID</th>
         </tr>
     </table>
+
+    <button class="new-book-button" command="show-modal" commandfor="my-dialog">Add new book</button>
+    <dialog id="my-dialog">
+        <p>Add new book:</p>
+        <label for="author">Author</label>
+        <input id="author" type="text">
+
+        <label for="title">Title</label>
+        <input id="title" type="text">
+
+        <label for="length">Length</label>
+        <input id="length"type="number">
+        <button type="submit" commandfor="my-dialog" command="close">Submit</button>
+        <button commandfor="my-dialog" command="close">Close</button>
+    </dialog>
 </body>
 </html>

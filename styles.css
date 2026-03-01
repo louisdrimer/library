@@ -13,3 +13,7 @@ td {
 th#identification {
     width: 500px;
 }
+
+.new-book-button {
+    margin-top: 15px;
+}

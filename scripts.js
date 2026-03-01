@@ -23,3 +23,5 @@ function addBookToLibrary(title, author, length) {
 
     libraryTable.appendChild(newRow);
 }
+
+// event.preventDefault();
